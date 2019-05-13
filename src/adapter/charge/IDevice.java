@@ -1,5 +1,5 @@
 package adapter.charge;
 
-public interface IComputer {
+public interface IDevice {
     void usbInterface();//
 }
