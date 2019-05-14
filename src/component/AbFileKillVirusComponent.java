@@ -8,14 +8,14 @@ import java.util.List;
  */
 public abstract class AbFileKillVirusComponent {
     String fileName;
+//    String appendStr;
+    List<AbFileKillVirusComponent> subFiles = new ArrayList<>();
 
-    List<FileKillVirus> subFiles = new ArrayList<>();
-
-    abstract void addFile(FileKillVirus fileKillVirus);
+    abstract void addFile(AbFileKillVirusComponent fileKillVirus);
 
     abstract void removeFile(int i);
 
-    abstract FileKillVirus getFile(int i);
+    abstract AbFileKillVirusComponent getFile(int i);
 
     abstract void killVirus();
 }

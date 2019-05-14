@@ -6,13 +6,13 @@ package command.compressplus;
  */
 public  class UncompressCommand extends AbCompressCommand {
 
-
-    public UncompressCommand(Class aClass) {
-        super(aClass);
+    public UncompressCommand(String fileName) {
+        super(fileName);
     }
 
     @Override
     void excute() {
+        super.excute();
         compressRecevier.uncompress();
     }
 }

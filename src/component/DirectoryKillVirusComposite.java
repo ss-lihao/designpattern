@@ -10,7 +10,7 @@ public class DirectoryKillVirusComposite extends AbFileKillVirusComponent {
 
 
     @Override
-    void addFile(FileKillVirus fileKillVirus) {
+    void addFile(AbFileKillVirusComponent fileKillVirus) {
         subFiles.add(fileKillVirus);
     }
 
@@ -20,14 +20,14 @@ public class DirectoryKillVirusComposite extends AbFileKillVirusComponent {
     }
 
     @Override
-    FileKillVirus getFile(int i) {
+    AbFileKillVirusComponent getFile(int i) {
         return subFiles.get(i);
     }
 
     @Override
     void killVirus() {
         System.out.println(fileName + "文件夹正在杀毒,请稍等...");
-        for (FileKillVirus item:subFiles){
+        for (AbFileKillVirusComponent item:subFiles){
             item.killVirus();
         }
     }

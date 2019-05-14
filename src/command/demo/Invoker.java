@@ -1,7 +1,7 @@
 package command.demo;
 
 /**
- * 被调用者：命令的请求者和调用者
+ * 被调用者：命令的请求者和调用者------菜单
  */
 public class Invoker {
     private ICommand command;

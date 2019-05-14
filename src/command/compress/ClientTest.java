@@ -7,7 +7,7 @@ public class ClientTest {
      * @param args
      */
     public static void main(String[] args) {
-        ZipUncompressCommandAb command = new ZipUncompressCommandAb();
+        ZipUncompressCommand command = new ZipUncompressCommand();
         CompressInvoker invoker = new CompressInvoker(command);
         invoker.excute();
     }

@@ -1,8 +1,8 @@
 package command.compressplus;
 
 
-public class CompressInvoker<T extends ICompressRecevier>  {
-    public CompressInvoker(AbCompressCommand<T> AbCompressCommand) {
+public class CompressInvoker  {
+    public CompressInvoker(AbCompressCommand AbCompressCommand) {
         this.AbCompressCommand = AbCompressCommand;
     }
     AbCompressCommand AbCompressCommand;

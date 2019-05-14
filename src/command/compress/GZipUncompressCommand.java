@@ -1,9 +1,9 @@
 package command.compress;
 
 /**
- * zip格式压缩
+ * gzip格式解压
  */
-public  class GZipUncompressCommandAb extends AbCompressCommand {
+public  class GZipUncompressCommand extends AbCompressCommand {
     @Override
     void excute() {
         gZipCompressRecevier.uncompress();

@@ -6,12 +6,14 @@ package command.compressplus;
  */
 public  class CompressCommand extends AbCompressCommand {
 
-    public CompressCommand(Class aClass) {
-        super(aClass);
+
+    public CompressCommand(String fileName) {
+        super(fileName);
     }
 
     @Override
     void excute() {
+        super.excute();
         compressRecevier.compress();
     }
 }

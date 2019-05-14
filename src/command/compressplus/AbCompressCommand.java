@@ -1,26 +1,22 @@
 package command.compressplus;
 
 
-public abstract class AbCompressCommand<T extends ICompressRecevier> {
+public abstract class AbCompressCommand {
+    //不能把Recevier暴露出来
+    private ZipCompressRecevier zipCompressRecevier = new ZipCompressRecevier();
+    private GZipCompressRecevier gZipCompressRecevier = new GZipCompressRecevier();
+    protected ICompressRecevier compressRecevier;
+    String fileName;
 
-    protected T compressRecevier;
-
-    /**
-     *  Class<T>就是T的类
-     * @param tClass
-     */
-    public AbCompressCommand(Class<T> tClass) {
-        try {
-//
-            // 通过反射获取model的真实类型
-//            ParameterizedType pt = (ParameterizedType) getClass().getGenericSuperclass();
-//            Class<T> clazz = (Class<T>) pt.getActualTypeArguments()[0];
-            // 通过反射创建model的实例
-            this.compressRecevier = tClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public AbCompressCommand(String fileName) {
+        this.fileName = fileName;
     }
 
-    abstract void excute();
+    void excute() {
+        if(fileName.endsWith("gzip")||fileName.endsWith("GZIP")){
+            compressRecevier = gZipCompressRecevier;
+        }else{
+            compressRecevier = zipCompressRecevier;
+        }
+    }
 }

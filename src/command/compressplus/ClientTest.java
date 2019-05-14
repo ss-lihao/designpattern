@@ -8,8 +8,7 @@ public class ClientTest {
      * @param args
      */
     public static void main(String[] args) {
-
-        CompressInvoker<ZipCompressRecevier> invoker = new CompressInvoker(new CompressCommand(ZipCompressRecevier.class));
+        CompressInvoker invoker = new CompressInvoker(new UncompressCommand("y.zip"));
         invoker.excute();
     }
 }

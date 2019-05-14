@@ -9,7 +9,7 @@ public class FileKillVirus extends AbFileKillVirusComponent {
     }
 
     @Override
-    void addFile(FileKillVirus fileKillVirus) {
+    void addFile(AbFileKillVirusComponent fileKillVirus) {
 
     }
 
@@ -19,7 +19,7 @@ public class FileKillVirus extends AbFileKillVirusComponent {
     }
 
     @Override
-    FileKillVirus getFile(int i) {
+    AbFileKillVirusComponent getFile(int i) {
         return this;
     }
 
